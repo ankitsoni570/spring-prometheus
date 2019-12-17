@@ -1,2 +1,11 @@
+service: default
 runtime: java
 env: flex
+threadsafe: true
+version: v1
+---
+service: default
+version: v2
+runtime: java
+env: flex
+threadsafe: true
