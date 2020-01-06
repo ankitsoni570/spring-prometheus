@@ -58,7 +58,7 @@ pipeline {
               withCredentials([file(credentialsId: "gcp-key", variable: 'GOOGLE_APPLICATION_CREDENTIALS')])
             	{
             		sh("gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS")
-            		sh("gcloud app services set-traffic default --splits v11=100 --split-by ip")
+            		sh("gcloud app services set-traffic default --splits v1=100 --split-by ip")
             	}
          }
       }
