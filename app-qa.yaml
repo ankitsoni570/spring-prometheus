@@ -1,8 +1,6 @@
-service: prodenv
+service: testenv
 runtime: java
 env: flex
 threadsafe: true
 manual_scaling:
   instances: 1
-
-
