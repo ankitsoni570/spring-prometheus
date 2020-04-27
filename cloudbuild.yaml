@@ -5,5 +5,8 @@ steps:
   
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/concrete-crow-244606/spring-prometheus', '.']
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy', 'app.yaml', '--image-url', 'gcr.io/concrete-crow-244606/spring-prometheus', '.']
     
 images: ['gcr.io/concrete-crow-244606/spring-prometheus']
